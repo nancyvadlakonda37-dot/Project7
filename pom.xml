@@ -8,15 +8,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
-        <relativePath/>
+        <version>3.3.6</version>
     </parent>
 
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-
     <packaging>war</packaging>
 
     <properties>
@@ -44,7 +41,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- External Tomcat support -->
+        <!-- Tomcat provided -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -58,40 +55,17 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 (test DB) -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
-
-        <!-- WAR name -->
-        <finalName>demo-0.0.1-SNAPSHOT</finalName>
+        <finalName>demo</finalName>
 
         <plugins>
-
-            <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <!-- Java 21 Compiler Support -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                </configuration>
-            </plugin>
-
         </plugins>
-
     </build>
 
 </project>
